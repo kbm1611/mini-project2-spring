@@ -22,6 +22,4 @@ public class UserEntity extends BaseTime {
 
     @Column(length = 20, nullable = false ,unique = true)
     private String nickname;
-
-
 }
