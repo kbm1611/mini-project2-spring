@@ -60,7 +60,15 @@ public class UserService {
 
 
     public boolean update(UserDto userDto){
-
+        int updatePk = userDto.getUser_no();
+        Optional<UserEntity> optional =userRepository.findById(updatePk);
+        if (optional.isPresent()){
+            UserEntity updateEntity = optional.get();
+            updateEntity.setNickname(userDto.getNickname());
+            updateEntity.setUid(userDto.getUid());
+            updateEntity.setUpwd(userDto.getUpwd());
+            return true;
+        } else return false;
     }
 }
 
