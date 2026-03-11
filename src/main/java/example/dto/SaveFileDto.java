@@ -20,6 +20,8 @@ public class SaveFileDto {
     private String items;
     private String grave;
     private String hand;
+    private String createDate;
+    private String updateDate;
 
     public SaveFileEntity toEntity(){
         return SaveFileEntity.builder()
