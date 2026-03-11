@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserService {
@@ -44,7 +45,15 @@ public class UserService {
     }
 
     public boolean update(UserDto userDto){
-
+        int updatePk = userDto.getUser_no();
+        Optional<UserEntity> optional =userRepository.findById(updatePk);
+        if (optional.isPresent()){
+            UserEntity updateEntity = optional.get();
+            updateEntity.setNickname(userDto.getNickname());
+            updateEntity.setUid(userDto.getUid());
+            updateEntity.setUpwd(userDto.getUpwd());
+            return true;
+        } else return false;
     }
 }
 
