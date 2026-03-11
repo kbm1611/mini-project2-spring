@@ -31,7 +31,7 @@ public class UserController {
         return result;
     }
     @DeleteMapping
-    public boolean detete(@RequestParam int user_no){
+    public boolean delete(@RequestParam int user_no){
         boolean result = userService.delete(user_no);
         return result;
     }
