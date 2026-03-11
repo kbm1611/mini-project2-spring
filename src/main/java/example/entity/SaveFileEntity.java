@@ -54,7 +54,7 @@ public class SaveFileEntity extends BaseTime{
         return SaveFileDto.builder()
                 .user_no(user_no)
                 .current_round(current_round).current_discard(current_discard)
-                .grave(current_grave).hand(current_hand).current_hp(current_hp)
+                .current_grave(current_grave).current_hand(current_hand).current_hp(current_hp)
                 .current_score(current_score).current_money(current_money)
                 .createDate(getCreateDate().toString())
                 .updateDate(getUpdateDate().toString())

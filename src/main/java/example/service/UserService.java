@@ -29,22 +29,22 @@ public class UserService {
         List<UserEntity>  userEntityList =userRepository.findAll();
         List<UserDto> list = new ArrayList<>();
         userEntityList.forEach( entity->{
-            UserDto userDto = entity.toEntitiy();
+            UserDto userDto = entity.toDto();
             list.add(userDto);
         });
         return list;
     }
 
     public boolean findDetail(int user_no){
-        UserEntity saveEntity = UserDto
+        return false;
     }
 
     public boolean delete(int user_no){
-
+        return false;
     }
 
     public boolean update(UserDto userDto){
-
+        return false;
     }
 }
 

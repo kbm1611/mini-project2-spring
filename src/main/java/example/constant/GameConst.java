@@ -1,13 +1,14 @@
 package example.constant;
 
-import model.dto.Card;
-import model.dto.JokboDto;
-import model.dto.RoundDto;
+import example.dto.Card;
+import example.dto.JokboDto;
+import example.dto.RoundDto;
+import example.dto.Card;
 
 import java.util.ArrayList;
 
 public class GameConst {
-    public static final ArrayList<Card> BASIC_DECK = new ArrayList<>();
+    public static final ArrayList<example.dto.Card> BASIC_DECK = new ArrayList<>();
     static {
         // 1월 (송학)
         BASIC_DECK.add(new Card(1, 1, "광", 20, "1월_광"));

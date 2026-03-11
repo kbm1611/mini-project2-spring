@@ -18,6 +18,7 @@ public class GameLogDto {
     private Integer final_money;
     private String createDate;
     private String updateDate;
+    private String nickname;
     private Integer user_no;
 
     public GameLogEntity toEntity(){
