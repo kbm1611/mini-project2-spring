@@ -21,5 +21,5 @@ public class UserEntity {
     private String upwd;
 
     @Column(length = 20, nullable = false ,unique = true)
-    private String uname;
+    private String nickname;
 }
