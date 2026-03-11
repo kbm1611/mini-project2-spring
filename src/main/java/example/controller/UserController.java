@@ -26,8 +26,8 @@ public class UserController {
         return userDtoList;
     }
     @GetMapping("/detail")
-    public boolean findDetail(@RequestParam int user_no){
-        boolean result = userService.findDetail(user_no);
+    public UserDto findDetail(@RequestParam int user_no){
+        UserDto result = userService.findDetail(user_no);
         return result;
     }
     @DeleteMapping

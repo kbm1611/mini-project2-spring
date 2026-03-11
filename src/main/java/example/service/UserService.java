@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserService {
@@ -29,19 +30,34 @@ public class UserService {
         List<UserEntity>  userEntityList =userRepository.findAll();
         List<UserDto> list = new ArrayList<>();
         userEntityList.forEach( entity->{
-            UserDto userDto = entity.toEntitiy();
+            UserDto userDto = entity.toDto();
             list.add(userDto);
         });
         return list;
     }
 
-    public boolean findDetail(int user_no){
-        UserEntity saveEntity = UserDto
+    public UserDto findDetail(int user_no){
+        Optional<UserEntity> optional =userRepository.findById(user_no);
+
+        if (optional.isPresent()){
+            UserEntity userEntity = optional.get();
+            UserDto userDto = userEntity.toDto();
+            return userDto;
+        }
+        return null;
     }
+
 
     public boolean delete(int user_no){
 
+        boolean exist = userRepository.existsById(user_no);
+        if (exist){
+              userRepository.deleteById(user_no);
+              return true;
+        }
+        return false;
     }
+
 
     public boolean update(UserDto userDto){
 
