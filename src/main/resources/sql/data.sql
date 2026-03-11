@@ -24,7 +24,7 @@ INSERT INTO item_info (item_no, name, type, price, description, effect_code) VAL
                                                                                  (10, '아수라발발타', '점괘', 400, '목숨을 3으로 만든다', 'ACTIVE_ASURA_HP');
 
 -- game_log 테이블 샘플 데이터
-INSERT INTO game_log (log_no, user_no, play_date, final_score, final_round, final_money) VALUES
+INSERT INTO game_log (log_no, user_no, create_date, final_score, final_round, final_money) VALUES
                                                                                              (1, 1, '2026-02-09', 9899, 8, 400),
                                                                                              (2, 1, '2026-02-09', 1542, 2, 250),
                                                                                              (3, 2, '2026-02-08', 1651, 2, 100),
