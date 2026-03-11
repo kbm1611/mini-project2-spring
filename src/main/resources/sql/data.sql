@@ -1,4 +1,4 @@
-INSERT INTO user (user_no, uid, upwd, nickname) VALUES
+INSERT INTO users (user_no, uid, upwd, nickname) VALUES
                                                     (1, 'admin', '1234', '관리자1'),
                                                     (2, 'kafell', '141543', '아저씨1'),
                                                     (3, 'ganatech', 'pw123', '가나전력'),

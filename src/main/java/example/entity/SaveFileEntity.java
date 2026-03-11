@@ -1,5 +1,6 @@
 package example.entity;
 
+import example.dto.SaveFileDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @Entity
 @Table(name = "save_file")
-public class SaveFileEntity {
+public class SaveFileEntity extends BaseTime{
 
     @Id
     private Integer user_no; //기본키
@@ -48,4 +49,15 @@ public class SaveFileEntity {
 
     @Column(length = 500)
     private String item;
+
+    public SaveFileDto toDto(){
+        return SaveFileDto.builder()
+                .user_no(user_no)
+                .current_round(current_round).current_discard(current_discard)
+                .grave(current_grave).hand(current_hand).current_hp(current_hp)
+                .current_score(current_score).current_money(current_money)
+                .createDate(getCreateDate().toString())
+                .updateDate(getUpdateDate().toString())
+                .build();
+    }
 }

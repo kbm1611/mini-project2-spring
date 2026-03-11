@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 
 @AllArgsConstructor @NoArgsConstructor @Data @Builder
 @Entity @Table(name = "users")
-public class UserEntity {
+public class UserEntity extends BaseTime {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer user_no;
@@ -21,5 +21,7 @@ public class UserEntity {
     private String upwd;
 
     @Column(length = 20, nullable = false ,unique = true)
-    private String uname;
+    private String nickname;
+
+
 }
