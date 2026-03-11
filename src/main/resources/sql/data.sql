@@ -1,14 +1,14 @@
-INSERT INTO users (user_no, uid, upwd, nickname) VALUES
-                                                    (1, 'admin', '1234', '관리자1'),
-                                                    (2, 'kafell', '141543', '아저씨1'),
-                                                    (3, 'ganatech', 'pw123', '가나전력'),
-                                                    (4, 'topline', 'pw432', '탑라인'),
-                                                    (5, 'sunnet', 'pw000', '썬네트'),
-                                                    (6, 'wireguy', 'pw001', '와이어맨'),
-                                                    (7, 'junil', 'pw4321', '준일통신'),
-                                                    (8, 'jinyoung', 'pw876', '진영씨'),
-                                                    (9, 'datahero', 'pw555', '데이터영웅'),
-                                                    (10, 'jhwang', 'pw789', '황사장');
+INSERT INTO users (user_no, create_date, update_date ,uid, upwd, nickname) VALUES
+                                                    (1, Now(), Now(),'admin', '1234', '관리자1'),
+                                                    (2, Now(), Now(), 'kafell', '141543', '아저씨1'),
+                                                    (3, Now(), Now(),'ganatech', 'pw123', '가나전력'),
+                                                    (4, Now(), Now(),'topline', 'pw432', '탑라인'),
+                                                    (5, Now(), Now(),'sunnet', 'pw000', '썬네트'),
+                                                    (6, Now(), Now(),'wireguy', 'pw001', '와이어맨'),
+                                                    (7, Now(), Now(),'junil', 'pw4321', '준일통신'),
+                                                    (8, Now(), Now(),'jinyoung', 'pw876', '진영씨'),
+                                                    (9, Now(), Now(),'datahero', 'pw555', '데이터영웅'),
+                                                    (10,Now(), Now(),'jhwang', 'pw789', '황사장');
 
 -- item_info 테이블 샘플 데이터
 INSERT INTO item_info (item_no, name, type, price, description, effect_code) VALUES
