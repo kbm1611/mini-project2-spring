@@ -22,11 +22,11 @@ public class UserController {
     }
     @GetMapping
     public List<UserDto> findAll(){
-        List<UserDto> userDtoList = userService.findAll();
+        List<UserDto> userDtoList = userService.find();
         return userDtoList;
     }
     @GetMapping("/detail")
-    public boolean findDetail(@@RequestParam user_no){
+    public boolean findDetail(@RequestParam int user_no){
         boolean result = userService.findDetail(user_no);
         return result;
     }

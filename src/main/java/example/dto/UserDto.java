@@ -1,5 +1,6 @@
 package example.dto;
 
+import example.entity.UserEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,6 +24,7 @@ public class UserDto {
                 .nickname(this.nickname)
                 .build();
     }
+
 
 
 }
