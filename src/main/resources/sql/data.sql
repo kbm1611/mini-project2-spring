@@ -1,14 +1,16 @@
-INSERT INTO users (user_no, create_date, update_date ,uid, upwd, nickname) VALUES
-                                                    (1, Now(), Now(),'admin', '1234', '관리자1'),
-                                                    (2, Now(), Now(), 'kafell', '141543', '아저씨1'),
-                                                    (3, Now(), Now(),'ganatech', 'pw123', '가나전력'),
-                                                    (4, Now(), Now(),'topline', 'pw432', '탑라인'),
-                                                    (5, Now(), Now(),'sunnet', 'pw000', '썬네트'),
-                                                    (6, Now(), Now(),'wireguy', 'pw001', '와이어맨'),
-                                                    (7, Now(), Now(),'junil', 'pw4321', '준일통신'),
-                                                    (8, Now(), Now(),'jinyoung', 'pw876', '진영씨'),
-                                                    (9, Now(), Now(),'datahero', 'pw555', '데이터영웅'),
-                                                    (10,Now(), Now(),'jhwang', 'pw789', '황사장');
+INSERT INTO users
+(user_no, create_date, update_date, uid, upwd, nickname)
+VALUES
+    (1, Now(), Now(),'admin', '1234', '관리자1'),
+    (2, Now(), Now(),'kafell', '141543', '아저씨1'),
+    (3, Now(), Now(),'ganatech', 'pw123', '가나전력'),
+    (4, Now(), Now(),'topline', 'pw432', '탑라인'),
+    (5, Now(), Now(),'sunnet', 'pw000', '썬네트'),
+    (6, Now(), Now(),'wireguy', 'pw001', '와이어맨'),
+    (7, Now(), Now(),'junil', 'pw4321', '준일통신'),
+    (8, Now(), Now(),'jinyoung', 'pw876', '진영씨'),
+    (9, Now(), Now(),'datahero', 'pw555', '데이터영웅'),
+    (10, Now(), Now(),'jhwang', 'pw789', '황사장');
 
 -- item_info 테이블 샘플 데이터
 INSERT INTO item_info (item_no, name, type, price, description, effect_code) VALUES
@@ -24,17 +26,19 @@ INSERT INTO item_info (item_no, name, type, price, description, effect_code) VAL
                                                                                  (10, '아수라발발타', '점괘', 400, '목숨을 3으로 만든다', 'ACTIVE_ASURA_HP');
 
 -- game_log 테이블 샘플 데이터
-INSERT INTO game_log (log_no, user_no, create_date, update_date final_score, final_round, final_money) VALUES
-                                                                                             (1, 1, Now(), Now(), 9899, 8, 400),
-                                                                                             (2, 1, Now(), Now(),1542, 2, 250),
-                                                                                             (3, 2, Now(), Now(),1651, 2, 100),
-                                                                                             (4, 2, Now(), Now(),2975, 4, 400),
-                                                                                             (5, 5, Now(), Now(),8132, 7, 300),
-                                                                                             (6, 3, Now(), Now(), 3206, 4, 200),
-                                                                                             (7, 4, Now(), Now(),1823, 2, 100),
-                                                                                             (8, 5, Now(), Now(),8912, 8, 150),
-                                                                                             (9, 6, Now(), 5356, 6, 180),
-                                                                                             (10, 6, Now(), 4954, 5, 220);
+INSERT INTO game_log
+(log_no, user_no, create_date, update_date, final_score, final_round, final_money)
+VALUES
+    (1, 1, Now(), Now(), 9899, 8, 400),
+    (2, 1, Now(), Now(), 1542, 2, 250),
+    (3, 2, Now(), Now(), 1651, 2, 100),
+    (4, 2, Now(), Now(), 2975, 4, 400),
+    (5, 5, Now(), Now(), 8132, 7, 300),
+    (6, 3, Now(), Now(), 3206, 4, 200),
+    (7, 4, Now(), Now(), 1823, 2, 100),
+    (8, 5, Now(), Now(), 8912, 8, 150),
+    (9, 6, Now(), Now(), 5356, 6, 180),
+    (10, 6, Now(), Now(), 4954, 5, 220);
 
 -- save_file 테이블 샘플 데이터
 INSERT INTO save_file (user_no, create_date, update_date, current_round, current_hp, current_discard, current_grave, current_hand, current_money, current_score, card, item) VALUES
